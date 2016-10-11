@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="dao.ContactsEntity" table="contacts" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="type" column="type"/>
+        <property name="info" column="info"/>
+    </class>
+    <class name="dao.EmployeeTasksEntity" table="employee_tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="plannedHours" column="plannedHours"/>
+        <property name="actualHours" column="actualHours"/>
+        <property name="status" column="status"/>
+    </class>
+    <class name="dao.EmployeesEntity" table="employees" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+        <property name="accessLvl" column="accessLvl"/>
+        <property name="personalNo" column="personalNo"/>
+        <property name="firstName" column="firstName"/>
+        <property name="lastName" column="lastName"/>
+        <property name="gender" column="gender"/>
+        <property name="birthDate" column="birthDate"/>
+        <property name="salary" column="salary"/>
+        <property name="deptId" column="deptID"/>
+        <property name="posId" column="posID"/>
+    </class>
+    <class name="dao.ProjectTasksEntity" table="project_tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="projectType" column="projectID"/>
+        <property name="taskType" column="taskID"/>
+    </class>
+    <class name="dao.ProjectTypesEntity" table="project_types" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="type" column="type"/>
+        <property name="name" column="name"/>
+    </class>
+    <class name="dao.ProjectsEntity" table="projects" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="name" column="name"/>
+        <property name="type" column="type"/>
+        <property name="startDate" column="startDate"/>
+        <property name="endDate" column="endDate"/>
+        <property name="bonus" column="bonus"/>
+        <property name="client" column="client"/>
+        <property name="cost" column="cost"/>
+        <property name="status" column="status"/>
+    </class>
+    <class name="dao.TaskTypesEntity" table="task_types" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="type" column="type"/>
+        <property name="name" column="name"/>
+    </class>
+    <class name="dao.TasksEntity" table="tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="projectId" column="projectID"/>
+        <property name="type" column="type"/>
+        <property name="bonusPercent" column="bonusPercent"/>
+    </class>
+    <class name="dao.ContactsEntity" table="contacts" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="employeeId" column="employeeID"/>
+        <property name="type" column="type"/>
+        <property name="info" column="info"/>
+    </class>
+    <class name="dao.EmployeeTasksEntity" table="employee_tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="empId" column="empID"/>
+        <property name="taskId" column="taskID"/>
+        <property name="plannedHours" column="plannedHours"/>
+        <property name="actualHours" column="actualHours"/>
+        <property name="status" column="status"/>
+    </class>
+    <class name="dao.EmployeesEntity" table="employees" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+        <property name="accessLvl" column="accessLvl"/>
+        <property name="personalNo" column="personalNo"/>
+        <property name="firstName" column="firstName"/>
+        <property name="lastName" column="lastName"/>
+        <property name="gender" column="gender"/>
+        <property name="birthDate" column="birthDate"/>
+        <property name="salary" column="salary"/>
+        <property name="managerId" column="managerID"/>
+        <property name="deptId" column="deptID"/>
+        <property name="posId" column="posID"/>
+    </class>
+    <class name="dao.ProjectTasksEntity" table="project_tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="projectType" column="projectType"/>
+        <property name="taskType" column="taskType"/>
+    </class>
+    <class name="dao.ProjectTypesEntity" table="project_types" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="type" column="type"/>
+        <property name="name" column="name"/>
+    </class>
+    <class name="dao.ProjectsEntity" table="projects" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="name" column="name"/>
+        <property name="type" column="type"/>
+        <property name="startDate" column="startDate"/>
+        <property name="endDate" column="endDate"/>
+        <property name="bonus" column="bonus"/>
+        <property name="client" column="client"/>
+        <property name="cost" column="cost"/>
+        <property name="status" column="status"/>
+    </class>
+    <class name="dao.TaskTypesEntity" table="task_types" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="type" column="type"/>
+        <property name="name" column="name"/>
+    </class>
+    <class name="dao.TasksEntity" table="tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="projectId" column="projectID"/>
+        <property name="type" column="type"/>
+        <property name="bonusPercent" column="bonusPercent"/>
+    </class>
+    <class name="dao.ContactsEntity" table="contacts" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="employeeId" column="employeeID"/>
+        <property name="type" column="type"/>
+        <property name="info" column="info"/>
+    </class>
+    <class name="dao.EmployeeTasksEntity" table="employee_tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="empId" column="empID"/>
+        <property name="taskId" column="taskID"/>
+        <property name="plannedHours" column="plannedHours"/>
+        <property name="actualHours" column="actualHours"/>
+        <property name="status" column="status"/>
+    </class>
+    <class name="dao.EmployeesEntity" table="employees" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="username" column="username"/>
+        <property name="password" column="password"/>
+        <property name="accessLvl" column="accessLvl"/>
+        <property name="personalNo" column="personalNo"/>
+        <property name="firstName" column="firstName"/>
+        <property name="lastName" column="lastName"/>
+        <property name="gender" column="gender"/>
+        <property name="birthDate" column="birthDate"/>
+        <property name="salary" column="salary"/>
+        <property name="managerId" column="managerID"/>
+        <property name="deptId" column="deptID"/>
+        <property name="posId" column="posID"/>
+    </class>
+    <class name="dao.ProjectTasksEntity" table="project_tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="projectType" column="projectType"/>
+        <property name="taskType" column="taskType"/>
+    </class>
+    <class name="dao.ProjectTypesEntity" table="project_types" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="type" column="type"/>
+        <property name="name" column="name"/>
+    </class>
+    <class name="dao.ProjectsEntity" table="projects" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="name" column="name"/>
+        <property name="type" column="type"/>
+        <property name="startDate" column="startDate"/>
+        <property name="endDate" column="endDate"/>
+        <property name="bonus" column="bonus"/>
+        <property name="client" column="client"/>
+        <property name="cost" column="cost"/>
+        <property name="status" column="status"/>
+    </class>
+    <class name="dao.TaskTypesEntity" table="task_types" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="type" column="type"/>
+        <property name="name" column="name"/>
+    </class>
+    <class name="dao.TasksEntity" table="tasks" schema="bonus_system">
+        <id name="id" column="ID"/>
+        <property name="projectId" column="projectID"/>
+        <property name="type" column="type"/>
+        <property name="bonusPercent" column="bonusPercent"/>
+    </class>
+</hibernate-mapping>

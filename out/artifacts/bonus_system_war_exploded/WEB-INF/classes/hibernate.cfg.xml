@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/bonus_system</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">mari</property>
+        <mapping resource="hibernateMap.xml"/>
+        <mapping class="dao.ContactsEntity"/>
+        <mapping class="dao.EmployeeTasksEntity"/>
+        <mapping class="dao.EmployeesEntity"/>
+        <mapping class="dao.ProjectTasksEntity"/>
+        <mapping class="dao.ProjectTypesEntity"/>
+        <mapping class="dao.ProjectsEntity"/>
+        <mapping class="dao.TaskTypesEntity"/>
+        <mapping class="dao.TasksEntity"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
